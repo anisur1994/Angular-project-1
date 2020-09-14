@@ -1,0 +1,35 @@
+<div class="row">
+    <h1 style="text-align: center; padding: 2rem;">Books Information</h1>
+</div>
+
+<hr>
+
+<div class="container-table">
+    <table class="table">
+        <thead>
+            <tr class="bg-primary">
+                <th class="p-2" scope="col">Serial</th>
+                <th class="p-2" scope="col">Name</th>
+                <th class="p-2" scope="col">Author</th>
+                <th class="p-2" scope="col">ISBN</th>
+                <th class="p-2" scope="col">Category</th>
+                <th class="p-2" scope="col">Image</th>
+                <th class="p-2" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody class="t_body">
+            <tr *ngFor = "let items of bookData">
+                <th scope="row">{{ items.id }}</th>
+                <td>{{ items.name }}</td>
+                <td>{{ items.author }}</td>
+                <td>{{ items.isbn }}</td>
+                <td>{{ items.category }}</td>
+                <td>{{ items.image }}</td>
+                <td>
+                    <span><a (click) = "openDialog(items)"><mat-icon>create</mat-icon></a></span>
+                    <span><a (click) = "ngDelete(items)"><mat-icon>delete</mat-icon></a></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,22 @@
+<div class="header-img">
+    <a><img src="../../../assets/images/libraria-logo-v2.png" alt="" srcset=""></a>
+</div>
+<br>
+<br>
+<div class="side_bar">
+    <aside id="secondary" class="sidebar widget-area" data-accordion-group>
+        <button>DashBoard</button>
+        <div class="widget widget_related_search open" data-accordion>
+            <h5 class="widget-sub-title" data-control style="cursor: pointer;">Manage Products</h5>
+            <div class="widget_categories" data-content>
+                <ul style="padding: 0px;">
+                    <li><a routerLink="/dashboard/posts">Show Database</a></li>
+                    <li><a routerLink="/dashboard">Manage Books</a></li>
+                </ul>
+            </div>
+        </div>        
+        <br>
+        <hr>
+        <button routerLink="/" (click)="logOut('loginStatus')">Logout</button>
+    </aside>
+</div>

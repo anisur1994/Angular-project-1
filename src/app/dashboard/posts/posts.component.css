@@ -1,0 +1,18 @@
+.p-1{
+    padding: 1rem!important;
+}
+.p-2{
+    padding: 2rem!important;
+}
+.t_body tr > th,
+.t_body tr > td{
+    padding: 1.5rem!important
+}
+
+.t_body tr:nth-child(even){
+    background-color: #fcf8e3!important;
+}
+.container-table{
+    width: 90% !important;
+    margin: auto !important;
+}

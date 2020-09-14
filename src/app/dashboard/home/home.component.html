@@ -1,0 +1,47 @@
+<div class="row">
+    <h1 style="text-align: center; padding: 2rem;">Add New Book</h1>
+</div>
+<hr>
+<div class="row">
+    <div class="container">
+        <form #userForm = "ngForm" (ngSubmit) = "onSubmit()" enctype="multipart/form-data">
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputEmail1">Book Name</label>
+                <input type="text" class="form-control" name="name" aria-describedby="emailHelp"
+                    placeholder="Enter Book Name" [(ngModel)] = "userModel.name">
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputPassword1">Author Name</label>
+                <input type="text" class="form-control" name="author" placeholder="Enter Author Name" [(ngModel)] = "userModel.author">
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputPassword1">Select Category</label>
+                <select class="form-control" name = "category" [(ngModel)] = "userModel.category">
+                    <option value="0">Select Category</option>
+                    <option value = "Kids">Kids</option>
+                    <option value = "Story">Story</option>
+                    <option value = "Sport">Sport</option>
+                </select>
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputPassword1">ISBN</label>
+                <input type="text" class="form-control" name="isbn" placeholder="Enter ISBN" [(ngModel)] = "userModel.isbn">
+            </div>           
+            <div class="col-sm-12 form-group p-2">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Description</label>
+                    <textarea class="form-control" name="description" rows="3" [(ngModel)] = "userModel.description"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-12 input-group mb-3 p-2">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Upload Book Image</label>
+                    <input type="file" name="picture" (change)="onChange($event)">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary" style="margin-bottom: 50px;">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

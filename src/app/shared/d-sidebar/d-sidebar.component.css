@@ -1,0 +1,15 @@
+.header-img a img{
+    padding: 5rem;
+}
+.side_bar > aside{
+    padding: 2.5rem 3rem !important;
+}
+ul > li{
+    list-style-type: none;
+}
+
+.side_bar aside > button{
+    width: 100% !important;
+    margin-bottom: 5rem !important;
+    box-shadow: 2px 1px 5px rgba(0,0,0,0.3) !important;
+}

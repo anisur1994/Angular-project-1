@@ -1,0 +1,58 @@
+<div class="row">
+    <h1 style="text-align: center; padding: 2rem;">Add New Book</h1>
+</div>
+<hr>
+<div class="row">
+    <div class="container">
+        <form [formGroup] = "userForm" (ngSubmit) = "onUpdate()">
+            <div class="col-sm-12 form-group p-2">
+                <label for="exampleInputEmail1">Book ID</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Book ID" formControlName="bId">
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputEmail1">Book Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp"
+                    placeholder="Enter Book Name" value="{{ dataBooks.name }}" formControlName = "bname">
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputPassword1">Author Name</label>
+                <input type="text" class="form-control" name="author" placeholder="Enter Author Name" 
+                value="{{ dataBooks.author }}" formControlName = "aname">
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputPassword1">Select Category</label>
+                <select class="form-control" formControlName = "bcate">
+                    <option value="0">Select Category</option>
+                    <option *ngFor="let category of booksCate" value="{{ category.id }}">{{ category.name }}</option>
+                </select>
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputPassword1">ISBN</label>
+                <input type="text" class="form-control" name="isbn" placeholder="Enter ISBN" 
+                value="{{ dataBooks.isbn }}" formControlName = "bIsbn">
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputEmail1">Edition</label>
+                <input type="text" class="form-control" name="edition" aria-describedby="emailHelp"
+                    placeholder="Book Edition" value="{{ dataBooks.edition }}" formControlName = "bEdition">
+            </div>
+            <div class="col-sm-6 form-group p-2">
+                <label for="exampleInputPassword1">Price</label>
+                <input type="text" class="form-control" placeholder="Book Price" name="price" 
+                value="{{ dataBooks.price }}" formControlName = "bPrice">
+            </div>
+            <div class="col-sm-12 form-group p-2">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Description</label>
+                    <textarea class="form-control" name="description" rows="3" 
+                    value="{{ dataBooks.description }}" formControlName = "bDescription">
+                    </textarea>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="btn-cls" mat-button mat-dialog-close>Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
